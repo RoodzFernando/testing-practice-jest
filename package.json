@@ -1,0 +1,24 @@
+{
+    "name": "testing-practice-jest",
+    "version": "1.0.0",
+    "description": "Write some tests using the JavaScript test runner Jest.",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "watch": "jest --watchAll"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RoodzFernando/testing-practice-jest.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/RoodzFernando/testing-practice-jest/issues"
+    },
+    "homepage": "https://github.com/RoodzFernando/testing-practice-jest#readme",
+    "devDependencies": {
+        "jest": "^26.0.1"
+    }
+}
