@@ -9,10 +9,10 @@ const ourTest = {
     },
     // A calculator object that contains the basic operations: add, subtract, divide, and multiply.
     calculator: {
-        add: () => {},
-        subtract: () => {},
-        divide: () => {},
-        multiply: () => {}
+        add: (x, y) => x + y,
+        subtract: (x, y) => x - y,
+        divide: (x, y) => x / y,
+        multiply: (x, y) => x * y,
     },
 }
 
