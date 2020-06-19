@@ -26,4 +26,15 @@ test('Calculator object has divide', () => {
     expect(ourTest.calculator.divide).toBeTruthy();
 })
 
-  
+test('acz cesaer function returns cec', () => {
+    expect(ourTest.caesar('acz', 2)).toBe('cec');
+});
+
+test('analyze the [1, 8, 3, 4, 2, 6] and return and object', () => {
+    expect(ourTest.analyze([1, 8, 3, 4, 2, 6])).toEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6
+    })
+})
