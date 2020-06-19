@@ -6,7 +6,14 @@ const ourTest = {
     // reverseString(string) takes a string and returns it reversed
     reverse: (str) => {
         return str.split("").reverse().join("");
-    }
+    },
+    // A calculator object that contains the basic operations: add, subtract, divide, and multiply.
+    calculator: {
+        add: () => {},
+        subtract: () => {},
+        divide: () => {},
+        multiply: () => {}
+    },
 }
 
 module.exports = ourTest;
