@@ -22,7 +22,7 @@ const functionObject = {
   caesar: (str, num) => {
     const letters = generateChar(97, 122);
     let output = '';
-    str.split("").forEach(letter => {
+    str.split('').forEach(letter => {
       const letterUpper = /^[A-Z]/.test(letter);
       letter = letter.toLowerCase();
       const letterIndex = letters.indexOf(letter);
@@ -44,7 +44,7 @@ const functionObject = {
             output += letters[letterIndex + num];
           }
         }
-      };
+      }
     })
     return output;
   },
@@ -57,9 +57,9 @@ const functionObject = {
       average: avg,
       min: min,
       max: max,
-      length: len
-    }
-  }
-}
+      length: len,
+    };
+  },
+};
 
 module.exports = functionObject;
