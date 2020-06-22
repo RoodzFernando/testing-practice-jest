@@ -36,14 +36,10 @@ const functionObject = {
           } else {
             output += letters[((letterIndex + num) % 25) - 1];
           }
-          
+        } else if (letterUpper) {
+          output += letters[letterIndex + num].toUpperCase();
         } else {
-
-          if (letterUpper) {
-            output += letters[letterIndex + num].toUpperCase();
-          } else {
-            output += letters[letterIndex + num];
-          }
+          output += letters[letterIndex + num];
         }
       }
     });
