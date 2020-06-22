@@ -19,6 +19,7 @@
     },
     "homepage": "https://github.com/RoodzFernando/testing-practice-jest#readme",
     "devDependencies": {
+        "eslint": "^7.3.0",
         "jest": "^26.0.1"
     }
 }
