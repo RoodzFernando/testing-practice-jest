@@ -42,9 +42,17 @@ describe("calculator object", () => {
     })
 })
 
-test('acz cesaer function returns cec', () => {
-    expect(functionObject.caesar('acz', 2)).toBe('cec');
+test('acz cesaer function returns ceb', () => {
+    expect(functionObject.caesar('acz', 2)).toBe('ceb');
 });
+
+test('aCZ ceaser function returns cEB', () => {
+    expect(functionObject.caesar('aCZ', 2)).toBe('cEB');
+})
+
+test('abc!, 1 ceaser function returns bcd!', () => {
+    expect(functionObject.caesar('abc!', 1)).toBe('bcd!');
+})
 
 test('analyze the [1, 8, 3, 4, 2, 6] and return and object', () => {
     expect(functionObject.analyze([1, 8, 3, 4, 2, 6])).toEqual({

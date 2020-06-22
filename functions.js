@@ -27,15 +27,34 @@ const functionObject = {
         ];
         let output = "";
         str.split("").forEach(letter => {
+            let letterUpper = /^[A-Z]/.test(letter);
+            letter = letter.toLowerCase();
+
             const letterIndex = letters.indexOf(letter);
-            if ((letterIndex + num) > 25) {
-                output += letters[(letterIndex + num) % 25];
+            // If not a letter, return same as is
+            if(/[^a-zA-Z]/.test(letter)){
+                output += letter;
+            }else{
+                if ((letterIndex + num) > 25) {
+                if(letterUpper){
+                    output += letters[(letterIndex + num) % 25 - 1].toUpperCase();
+                }else{
+                     output += letters[(letterIndex + num) % 25 - 1];
+                }
+               
             } else {
-                output += letters[letterIndex + num];
+                if(letterUpper){
+                    output += letters[letterIndex + num].toUpperCase();
+                }else{
+                    output += letters[letterIndex + num];
+                }
+                
             }
+            }
+            
 
         })
-        return output;
+       return output;
     },
     analyze: (arr) => {
         let len = arr.length;
