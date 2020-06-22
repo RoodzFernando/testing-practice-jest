@@ -6,17 +6,16 @@ function generateChar(low, high) {
     return charArr;
 }
 const functionObject = {
-    capitalize: (str) => { return `${str[0].toUpperCase()}${str.substr(1, str.length-1)}`; },
-    reverse: (str) => { return str.split("").reverse().join(""); },
+    capitalize: (str) => `${str[0].toUpperCase()}${str.substr(1, str.length-1)}`,
+    reverse: (str) => str.split("").reverse().join(""),
     calculator: {
         add: (x, y) => x + y,
         subtract: (x, y) => x - y,
         divide: (x, y) => {
-            if (y == 0) {
+            if (y === 0) {
                 return 'Error';
-            } else {
-                return x / y;
             }
+            return x / y;
         },
         multiply: (x, y) => x * y,
     },
