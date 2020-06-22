@@ -45,7 +45,7 @@ const functionObject = {
           }
         }
       }
-    })
+    });
     return output;
   },
   analyze: (arr) => {
@@ -55,8 +55,8 @@ const functionObject = {
     const max = Math.max(...arr);
     return {
       average: avg,
-      min: min,
-      max: max,
+      min,
+      max,
       length: len,
     };
   },
