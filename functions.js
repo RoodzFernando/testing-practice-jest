@@ -26,10 +26,11 @@ const functionObject = {
       const letterUpper = /^[A-Z]/.test(letter);
       letter = letter.toLowerCase();
       const letterIndex = letters.indexOf(letter);
+
       if (/[^a-zA-Z]/.test(letter)) {
-        
         output += letter;
-      } else if ((letterIndex + num) > 25) {
+      } 
+      else if ((letterIndex + num) > 25) {
 
         if (letterUpper) {
           output += letters[((letterIndex + num) % 25) - 1].toUpperCase();
