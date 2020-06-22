@@ -27,6 +27,7 @@ const functionObject = {
       letter = letter.toLowerCase();
       const letterIndex = letters.indexOf(letter);
       if (/[^a-zA-Z]/.test(letter)) {
+        
         output += letter;
       } else if ((letterIndex + num) > 25) {
 
