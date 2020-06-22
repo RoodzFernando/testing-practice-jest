@@ -1,3 +1,10 @@
+function generateChar(low, high) {
+    let charArr = [];
+    for (let i = low; i <= high; i++) {
+        charArr.push(String.fromCharCode(i));
+    }
+    return charArr;
+}
 const functionObject = {
     capitalize: (str) => {
         return `${str[0].toUpperCase()}${str.substr(1, str.length-1)}`;
@@ -18,43 +25,32 @@ const functionObject = {
         multiply: (x, y) => x * y,
     },
     caesar: (str, num) => {
-        const letters = [
-            'a', 'b', 'c', 'd', 'e', 'f',
-            'g', 'h', 'i', 'j', 'k', 'l',
-            'm', 'n', 'o', 'p', 'q', 'r',
-            's', 't', 'u', 'v', 'w', 'x',
-            'y', 'z'
-        ];
+        const letters = generateChar(97, 122);
         let output = "";
         str.split("").forEach(letter => {
             let letterUpper = /^[A-Z]/.test(letter);
             letter = letter.toLowerCase();
-
             const letterIndex = letters.indexOf(letter);
-            // If not a letter, return same as is
-            if(/[^a-zA-Z]/.test(letter)){
+            if (/[^a-zA-Z]/.test(letter)) {
                 output += letter;
-            }else{
-                if ((letterIndex + num) > 25) {
-                if(letterUpper){
-                    output += letters[(letterIndex + num) % 25 - 1].toUpperCase();
-                }else{
-                     output += letters[(letterIndex + num) % 25 - 1];
-                }
-               
             } else {
-                if(letterUpper){
-                    output += letters[letterIndex + num].toUpperCase();
-                }else{
-                    output += letters[letterIndex + num];
-                }
-                
-            }
-            }
-            
+                if ((letterIndex + num) > 25) {
+                    if (letterUpper) {
+                        output += letters[(letterIndex + num) % 25 - 1].toUpperCase();
+                    } else {
+                        output += letters[(letterIndex + num) % 25 - 1];
+                    }
 
+                } else {
+                    if (letterUpper) {
+                        output += letters[letterIndex + num].toUpperCase();
+                    } else {
+                        output += letters[letterIndex + num];
+                    }
+                }
+            }
         })
-       return output;
+        return output;
     },
     analyze: (arr) => {
         let len = arr.length;
