@@ -1,4 +1,4 @@
-const ourTest = {
+const functionObject = {
     capitalize: (str) => {
         return `${str[0].toUpperCase()}${str.substr(1, str.length-1)}`;
     },
@@ -8,7 +8,13 @@ const ourTest = {
     calculator: {
         add: (x, y) => x + y,
         subtract: (x, y) => x - y,
-        divide: (x, y) => x / y,
+        divide: (x, y) => {
+            if (y == 0) {
+                return 'Error';
+            } else {
+                return x / y;
+            }
+        },
         multiply: (x, y) => x * y,
     },
     caesar: (str, num) => {
@@ -47,4 +53,4 @@ const ourTest = {
     }
 }
 
-module.exports = ourTest;
+module.exports = functionObject;

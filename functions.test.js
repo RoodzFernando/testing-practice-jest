@@ -1,37 +1,53 @@
-const ourTest = require('./functions');
+const functionObject = require('./functions');
 
 
 test('capitalize(string) --> String', () => {
-    expect(ourTest.capitalize('string')).toBe('String');
+    expect(functionObject.capitalize('string')).toBe('String');
 });
 
 test('reverse(string) --> gnirts', () => {
-    expect(ourTest.reverse('string')).toBe('gnirts');
+    expect(functionObject.reverse('string')).toBe('gnirts');
 });
 
-test('Calculator object has add', () => {
-    expect(ourTest.calculator.add).toBeTruthy();
-})
+describe("calculator object", () => {
+    test('Calculator object has add', () => {
+        expect(functionObject.calculator.add).toBeTruthy();
+    })
 
-test('Calculator object has subtract', () => {
-    expect(ourTest.calculator.subtract).toBeTruthy();
-})
+    test('Calculator add(5,5) returns 10', () => {
+        expect(functionObject.calculator.add(5, 5)).toBe(10);
+    })
+
+    test('Calculator object has subtract', () => {
+        expect(functionObject.calculator.subtract).toBeTruthy();
+    })
+    test('Calculator subtract(15,10) returns 5', () => {
+        expect(functionObject.calculator.subtract(15, 10)).toBe(5);
+    })
 
 
-test('Calculator object has multiply', () => {
-    expect(ourTest.calculator.multiply).toBeTruthy();
-})
+    test('Calculator object has multiply', () => {
+        expect(functionObject.calculator.multiply).toBeTruthy();
+    })
 
-test('Calculator object has divide', () => {
-    expect(ourTest.calculator.divide).toBeTruthy();
+    test('Calculator multiply(5,5) returns 25', () => {
+        expect(functionObject.calculator.multiply(5, 5)).toBe(25);
+    })
+
+    test('Calculator object has divide', () => {
+        expect(functionObject.calculator.divide).toBeTruthy();
+    })
+    test('Calculator divide(10,5) returns 2', () => {
+        expect(functionObject.calculator.divide(10, 5)).toBe(2);
+    })
 })
 
 test('acz cesaer function returns cec', () => {
-    expect(ourTest.caesar('acz', 2)).toBe('cec');
+    expect(functionObject.caesar('acz', 2)).toBe('cec');
 });
 
 test('analyze the [1, 8, 3, 4, 2, 6] and return and object', () => {
-    expect(ourTest.analyze([1, 8, 3, 4, 2, 6])).toEqual({
+    expect(functionObject.analyze([1, 8, 3, 4, 2, 6])).toEqual({
         average: 4,
         min: 1,
         max: 8,
