@@ -36,6 +36,7 @@ const functionObject = {
           } else {
             output += letters[((letterIndex + num) % 25) - 1];
           }
+          
         } else {
 
           if (letterUpper) {

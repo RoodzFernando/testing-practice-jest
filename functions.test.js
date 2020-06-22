@@ -60,5 +60,5 @@ test('analyze the [1, 8, 3, 4, 2, 6] and return and object', () => {
     min: 1,
     max: 8,
     length: 6,
-  })
+  });
 });
