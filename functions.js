@@ -1,17 +1,13 @@
 function generateChar(low, high) {
-    let charArr = [];
-    for (let i = low; i <= high; i++) {
+    const charArr = [];
+    for (let i = low; i <= high; i += 1) {
         charArr.push(String.fromCharCode(i));
     }
     return charArr;
 }
 const functionObject = {
-    capitalize: (str) => {
-        return `${str[0].toUpperCase()}${str.substr(1, str.length-1)}`;
-    },
-    reverse: (str) => {
-        return str.split("").reverse().join("");
-    },
+    capitalize: (str) => { return `${str[0].toUpperCase()}${str.substr(1, str.length-1)}`; },
+    reverse: (str) => { return str.split("").reverse().join(""); },
     calculator: {
         add: (x, y) => x + y,
         subtract: (x, y) => x - y,
