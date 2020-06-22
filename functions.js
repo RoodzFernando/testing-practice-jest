@@ -28,19 +28,17 @@ const functionObject = {
       const letterIndex = letters.indexOf(letter);
       if (/[^a-zA-Z]/.test(letter)) {
         output += letter;
-      } else {
-        if ((letterIndex + num) > 25) {
+      } else if ((letterIndex + num) > 25) {
 
-          if (letterUpper) {
-            output += letters[((letterIndex + num) % 25) - 1].toUpperCase();
-          } else {
-            output += letters[((letterIndex + num) % 25) - 1];
-          }
-        } else if (letterUpper) {
-          output += letters[letterIndex + num].toUpperCase();
+        if (letterUpper) {
+          output += letters[((letterIndex + num) % 25) - 1].toUpperCase();
         } else {
-          output += letters[letterIndex + num];
+          output += letters[((letterIndex + num) % 25) - 1];
         }
+      } else if (letterUpper) {
+        output += letters[letterIndex + num].toUpperCase();
+      } else {
+        output += letters[letterIndex + num];
       }
     });
     return output;
