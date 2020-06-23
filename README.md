@@ -13,7 +13,7 @@ Write some tests using the JavaScript test runner Jest.
 ```
    git clone https://github.com/RoodzFernando/testing-practice-jest
    cd testing-practice-jest
-
+   run npm test
 ```
 
 
